@@ -1,0 +1,3 @@
+Определен тип 'array<int>' для переменной 'array' из выражения
+Уточнен тип массива для 'array': array<int>
+Добавлена переменная 'array' типа 'array<int>' в symbolTable

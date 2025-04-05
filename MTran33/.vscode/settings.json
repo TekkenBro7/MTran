@@ -1,0 +1,10 @@
+{
+    "editor.tabSize": 4,
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true,
+    "editor.quickSuggestions": {
+        "comments": "off",
+        "strings": "off",
+        "other": "off"
+    }
+}

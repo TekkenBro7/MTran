@@ -1,0 +1,6 @@
+└── Program
+    └── VariableDeclaration: array
+        └── ArrayDeclaration
+            ├── Number: 10
+            ├── Number: 20
+            └── Number: 30
