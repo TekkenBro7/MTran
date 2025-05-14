@@ -1,3 +1,19 @@
+// Класс
+type Person(name, age: int) =
+    member this.Name = name
+    member this.Age = age
+    
+    member this.DisplayInfo() =
+        printfn $"Имя: {this.Name}"
+        printfn $"Возраст: {this.Age}"
+        if this.Age >= 18 then
+            printfn $"{this.Name} является совершеннолетним."
+        else
+            printfn $"{this.Name} еще несовершеннолетний."
+
+    member this.Greet(other: Person) =
+        printfn $"Привет, {other.Name}! Меня зовут {this.Name}."
+
 type InnerClass() =
     member this.Display() =
         printfn "Inside Inner Class"
@@ -18,8 +34,12 @@ for n in 1..6 do printf $"{n}"
 
 let mutable n = 1
 
+while n < 10 do
+    printfn $"{n}"
+    n <- n + 1
 
 let mutable m = 1
+let mutable n = 1
 while m < 10 do
     while n < 10 do
         printf $"{m * n}\t"
@@ -35,11 +55,21 @@ let x = 10
 let y = 3L
 let name = "Alice"
 let flag = true
+let n3 = number1 + number2
 let n5 = number1 / 2 * 3
 let n4 = number1 / 2 * 3 + (2 + 3)
+number1 = n4 + 2
 let set1 = Set.ofArray [|"Tom"; "Bob"; "Sam"|]
 let numbers2 = seq {1; 2; 3; 4; 5}
 let numbers3 = seq {1..6} 
 let people = ["Tom"; "Alice"; "Sam"; "Kate"; "Bob"]
 let dict = Map["red", "красный"; "blue", "синий"; "green", "зеленый"]
 let people2 = [|"Tom"; "Sam"; "Bob"|]
+let set1 = Set.ofArray [|"Tom"; "Bob"; "Sam"|] 
+
+
+// Условие
+if isValid then
+    printfn  "text"
+else
+    printfn "Invalid"

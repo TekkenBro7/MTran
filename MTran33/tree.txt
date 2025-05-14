@@ -1,6 +1,162 @@
 └── Program
-    └── VariableDeclaration: array
+    ├── Class: InnerClass
+    │   └── Members
+    │       ├── MemberDefinition: Display
+    │       │   └── Body
+    │       │       └── Printfn
+    │       │           └── StringLiteral: "Inside Inner Class"
+    │       └── MemberDefinition: ShowMessage
+    │           ├── MethodParameters
+    │           │   └── Parameter: message
+    │           │       └── Type: string
+    │           └── Body
+    │               └── Printfn
+    │                   └── InterpolatedString: "Сообщение: {message}."
+    ├── ForToStatement
+    │   ├── Identifier: i
+    │   ├── StartValue
+    │   │   ├── Type: Number
+    │   │   └── Value: 1
+    │   ├── Direction: to
+    │   ├── EndValue
+    │   │   ├── Type: Number
+    │   │   └── Value: 5
+    │   └── Body
+    │       ├── VariableDeclaration: a
+    │       │   └── BinaryOp: +
+    │       │       ├── Number: 2
+    │       │       └── BinaryOp: *
+    │       │           ├── Identifier: i
+    │       │           └── Number: 3
+    │       └── Printfn
+    │           └── InterpolatedString: "i = {i}"
+    ├── ForToStatement
+    │   ├── Identifier: m
+    │   ├── StartValue
+    │   │   ├── Type: Number
+    │   │   └── Value: 1
+    │   ├── Direction: to
+    │   ├── EndValue
+    │   │   ├── Type: Number
+    │   │   └── Value: 9
+    │   └── Body
+    │       ├── ForToStatement
+    │       │   ├── Identifier: n
+    │       │   ├── StartValue
+    │       │   │   ├── Type: Number
+    │       │   │   └── Value: 1
+    │       │   ├── Direction: to
+    │       │   ├── EndValue
+    │       │   │   ├── Type: Number
+    │       │   │   └── Value: 9
+    │       │   └── Body
+    │       │       └── Printf
+    │       │           └── InterpolatedString: "{m * n}\t"
+    │       └── Printfn
+    │           └── StringLiteral: ""
+    ├── ForInStatement
+    │   ├── Identifier: n
+    │   ├── Range: 1..6
+    │   └── Body
+    │       └── Printf
+    │           └── InterpolatedString: "{n}"
+    ├── VariableDeclaration: n
+    │   ├── Modifier: mutable
+    │   └── Number: 1
+    ├── VariableDeclaration: m
+    │   ├── Modifier: mutable
+    │   └── Number: 1
+    ├── WhileStatement
+    │   ├── Condition
+    │   │   ├── Identifier: m
+    │   │   ├── Operator: <
+    │   │   └── Number: 10
+    │   └── Body
+    │       ├── WhileStatement
+    │       │   ├── Condition
+    │       │   │   ├── Identifier: n
+    │       │   │   ├── Operator: <
+    │       │   │   └── Number: 10
+    │       │   └── Body
+    │       │       ├── Printf
+    │       │       │   └── InterpolatedString: "{m * n}\t"
+    │       │       └── Assignment: n
+    │       │           └── BinaryOp: +
+    │       │               ├── Identifier: n
+    │       │               └── Number: 1
+    │       ├── Printfn
+    │       │   └── StringLiteral: ""
+    │       ├── Assignment: m
+    │       │   └── BinaryOp: +
+    │       │       ├── Identifier: m
+    │       │       └── Number: 1
+    │       └── Assignment: n
+    │           └── Number: 1
+    ├── VariableDeclaration: number1
+    │   └── Number: 1232121252
+    ├── VariableDeclaration: a
+    │   └── BinaryOp: +
+    │       ├── Number: 1
+    │       └── Number: 2
+    ├── VariableDeclaration: x
+    │   └── Number: 10
+    ├── VariableDeclaration: y
+    │   └── Number: 3L
+    ├── VariableDeclaration: name
+    │   └── String_literal: "Alice"
+    ├── VariableDeclaration: flag
+    │   └── Boolean_literal: true
+    ├── VariableDeclaration: n5
+    │   └── BinaryOp: *
+    │       ├── BinaryOp: /
+    │       │   ├── Identifier: number1
+    │       │   └── Number: 2
+    │       └── Number: 3
+    ├── VariableDeclaration: n4
+    │   └── BinaryOp: +
+    │       ├── BinaryOp: *
+    │       │   ├── BinaryOp: /
+    │       │   │   ├── Identifier: number1
+    │       │   │   └── Number: 2
+    │       │   └── Number: 3
+    │       └── BinaryOp: +
+    │           ├── Number: 2
+    │           └── Number: 3
+    ├── VariableDeclaration: set1
+    │   └── SetDeclaration
+    │       ├── String_literal: "Tom"
+    │       ├── String_literal: "Bob"
+    │       └── String_literal: "Sam"
+    ├── VariableDeclaration: numbers2
+    │   └── SequenceDeclaration
+    │       ├── Number: 1
+    │       ├── Number: 2
+    │       ├── Number: 3
+    │       ├── Number: 4
+    │       └── Number: 5
+    ├── VariableDeclaration: numbers3
+    │   └── SequenceDeclaration
+    │       └── Range: 1..6
+    ├── VariableDeclaration: people
+    │   └── ListDeclaration
+    │       ├── String_literal: "Tom"
+    │       ├── String_literal: "Alice"
+    │       ├── String_literal: "Sam"
+    │       ├── String_literal: "Kate"
+    │       └── String_literal: "Bob"
+    ├── VariableDeclaration: dict
+    │   └── MapDeclaration
+    │       ├── KeyValuePair
+    │       │   ├── String_literal: "red"
+    │       │   └── String_literal: "красный"
+    │       ├── KeyValuePair
+    │       │   ├── String_literal: "blue"
+    │       │   └── String_literal: "синий"
+    │       └── KeyValuePair
+    │           ├── String_literal: "green"
+    │           └── String_literal: "зеленый"
+    └── VariableDeclaration: people2
         └── ArrayDeclaration
-            ├── Number: 10
-            ├── Number: 20
-            └── Number: 30
+            ├── String_literal: "Tom"
+            ├── String_literal: "Sam"
+            └── String_literal: "Bob"

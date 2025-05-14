@@ -1,0 +1,95 @@
+type Person(name, age: int) =
+    member this.Name = name
+    member this.Age = age
+    
+    member this.DisplayInfo() =
+        printfn $"Имя: {this.Name}"
+        printfn $"Возраст: {this.Age}"
+        if this.Age >= 18 then
+            printfn $"{this.Name} является совершеннолетним."
+        else
+            printfn $"{this.Name} еще несовершеннолетний."
+
+    member this.Greet(other: Person) =
+        printfn $"Привет, {other.Name}! Меня зовут {this.Name}."
+
+type InnerClass() =
+    member this.Display() =
+        printfn "Inside Inner Class"
+    
+    member this.ShowMessage(message: string) =
+        printfn $"Сообщение: {message}."
+
+
+// === Переменные ===
+let mutable number1 = 1232121252
+let a = 1 + 2
+let x = 10
+let y = 3L
+let name = "Alice"
+let flag = true
+let number2 = 13212435
+let n3 = number1 + number2
+let n5 = number1 / 2 * 3
+let n4 = number1 / 2 * 3 + (2 + 3)
+let set1 = Set.ofArray [| "Tom"; "Bob"; "Sam" |]
+let numbers2 = seq { 1; 2; 3; 4; 5 }
+let numbers3 = seq { 1..6 }
+let people = [ "Tom"; "Alice"; "Sam"; "Kate"; "Bob" ]
+let dict = Map [ "red", "красный"; "blue", "синий"; "green", "зеленый" ]
+let people2 = [| "Tom"; "Sam"; "Bob" |]
+number1 <- n4 + 2
+
+// === Условия ===
+let isValid = true
+if isValid then
+    printfn "text"
+else
+    printfn "Invalid"
+
+let num = 42
+if num < 0 then
+    printfn "Число отрицательное"
+elif num > 100 then
+    printfn "Число положительное и больше 100"
+else
+    printfn "Число в промежутке (0, 100)"
+
+// === Циклы ===
+// Простая арифметика с циклом
+for i = 1 to 5 do
+    let a = 2 + i * 3
+    printfn $"i = {i}, a = {a}"
+
+// Таблица умножения 9x9
+printfn "\nТаблица умножения:"
+for m = 1 to 9 do
+    for n = 1 to 9 do
+        printf $"{m * n}\t"
+    printfn ""
+
+// Перебор массива
+let numbersNum = [| 1; 2; 3; 4; 5 |]
+for n in numbersNum do
+    printfn $"Element: {n}"
+
+// Краткий цикл
+printfn "\nСчёт от 1 до 6:"
+for n in 1..6 do
+    printf $"{n} "
+printfn ""
+
+// Бесконечный цикл (ограничим его)
+printfn "\nПервые 5 чисел:"
+let mutable n = 1
+while n <= 5 do
+    printfn $"{n}"
+    n <- n + 1
+
+// Квадраты нечётных чисел
+printfn "\nКвадраты нечётных чисел < 10:"
+let mutable example = 1
+while example < 10 do
+    printf $"{example * example} йоу "
+    example <- example + 2
+printfn ""

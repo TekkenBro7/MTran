@@ -254,6 +254,9 @@ class SemanticAnalyzer {
                     line: node.line)
             } else {
                 // Проверяем типы аргументов
+
+                // на 4 это вернуть
+
                 for (i, argNode) in argsNode.children.enumerated() {
                     if let paramType = symbol.parameters?[i].type {
                         let argType = inferType(node: argNode)
